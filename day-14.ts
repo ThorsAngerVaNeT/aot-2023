@@ -1,4 +1,4 @@
-type DecipherNaughtyList<T extends string, Result extends string[] = []> =
+type DecipherNaughtyList<T extends string> =
   T extends `${infer X}/${infer Last}`
-  ? DecipherNaughtyList<Last, [...Result, X]>
-  : [...Result, T][number];
+  ? X | DecipherNaughtyList<Last>
+  : T;
