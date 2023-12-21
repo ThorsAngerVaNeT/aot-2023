@@ -27,28 +27,16 @@ type IsItDraw<Board extends TicTactToeBoard> = IsBoardHasEmptyCells<Board> exten
   ? false
   : true;
 
-type CheckCell<Cell extends string, Chip extends TicTacToeChip> = Cell extends Chip ? true : false;
-type CheckArray<A extends string[], Chip extends TicTacToeChip> =
-  | CheckCell<A[0], Chip>
-  | CheckCell<A[1], Chip>
-  | CheckCell<A[2], Chip> extends true
+type CheckArray<A extends string[], Chip extends TicTacToeChip> = A[number] extends Chip
   ? true
   : false;
-type CheckColumns<
-  Board extends TicTactToeBoard,
-  Chip extends TicTacToeChip,
-  Count extends unknown[] = [],
-> = true extends
+type CheckColumns<Board extends TicTactToeBoard, Chip extends TicTacToeChip> = true extends
   | CheckArray<[Board[0][0], Board[1][0], Board[2][0]], Chip>
   | CheckArray<[Board[0][1], Board[1][1], Board[2][1]], Chip>
   | CheckArray<[Board[0][2], Board[1][2], Board[2][2]], Chip>
   ? true
   : false;
-type CheckRows<
-  Board extends TicTactToeBoard,
-  Chip extends TicTacToeChip,
-  Count extends unknown[] = [],
-> = true extends
+type CheckRows<Board extends TicTactToeBoard, Chip extends TicTacToeChip> = true extends
   | CheckArray<Board[0], Chip>
   | CheckArray<Board[1], Chip>
   | CheckArray<Board[2], Chip>
@@ -109,7 +97,10 @@ type UpdateBoard<
 
 type MakeMove<Game extends TicTacToeGame, Y extends number, X extends number> = {
   board: UpdateBoard<Game, Y, X>;
-  state: GetState<UpdateBoard<Game, Y, X>, Game["state"] extends TicTacToeChip ? Game['state'] : never>;
+  state: GetState<
+    UpdateBoard<Game, Y, X>,
+    Game["state"] extends TicTacToeChip ? Game["state"] : never
+  >;
 };
 
 type TicTacToe<
