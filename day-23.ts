@@ -117,35 +117,20 @@ type GetRightDiagonals<
   infer $4 extends Connect4Cell[],
   ...infer R extends Connect4Cell[][]
 ]
-  ? EndColumnIndex['length'] extends Board[0]['length']
-    ? GetRightDiagonals<
-        [$2, $3, $4, ...R],
+  ? GetRightDiagonals<
+      EndColumnIndex['length'] extends Board[0]['length'] ? [$2, $3, $4, ...R] : Board,
+      [
+        ...Result,
         [
-          ...Result,
-          [
-            $4[StartColumnIndex['length']],
-            $3[[...StartColumnIndex, 1]['length']],
-            $2[[...StartColumnIndex, 1, 2]['length']],
-            $1[[...StartColumnIndex, 1, 2, 3]['length']]
-          ]
-        ],
-        [],
-        [0, 1, 2, 3]
-      >
-    : GetRightDiagonals<
-        Board,
-        [
-          ...Result,
-          [
-            $4[StartColumnIndex['length']],
-            $3[[...StartColumnIndex, 1]['length']],
-            $2[[...StartColumnIndex, 1, 2]['length']],
-            $1[[...StartColumnIndex, 1, 2, 3]['length']]
-          ]
-        ],
-        [...StartColumnIndex, StartColumnIndex['length']],
-        [...EndColumnIndex, EndColumnIndex['length']]
-      >
+          $4[StartColumnIndex['length']],
+          $3[[...StartColumnIndex, 1]['length']],
+          $2[[...StartColumnIndex, 1, 2]['length']],
+          $1[[...StartColumnIndex, 1, 2, 3]['length']]
+        ]
+      ],
+      EndColumnIndex['length'] extends Board[0]['length'] ? [] : [...StartColumnIndex, StartColumnIndex['length']],
+      EndColumnIndex['length'] extends Board[0]['length'] ? [0, 1, 2, 3] : [...EndColumnIndex, EndColumnIndex['length']]
+    >
   : Result;
 type GetLeftDiagonals<
   Board extends Connect4Cell[][],
@@ -159,33 +144,18 @@ type GetLeftDiagonals<
   infer $4 extends Connect4Cell[],
   ...infer R extends Connect4Cell[][]
 ]
-  ? EndColumnIndex['length'] extends Board[0]['length']
-    ? GetLeftDiagonals<
-        [$2, $3, $4, ...R],
+  ? GetLeftDiagonals<
+      EndColumnIndex['length'] extends Board[0]['length'] ? [$2, $3, $4, ...R] : Board,
+      [
+        ...Result,
         [
-          ...Result,
-          [
-            $1[[...StartColumnIndex]['length']],
-            $2[[...StartColumnIndex, 1]['length']],
-            $3[[...StartColumnIndex, 1, 2]['length']],
-            $4[[...StartColumnIndex, 1, 2, 3]['length']]
-          ]
-        ],
-        [],
-        [0, 1, 2, 3]
-      >
-    : GetLeftDiagonals<
-        Board,
-        [
-          ...Result,
-          [
-            $1[[...StartColumnIndex]['length']],
-            $2[[...StartColumnIndex, 1]['length']],
-            $3[[...StartColumnIndex, 1, 2]['length']],
-            $4[[...StartColumnIndex, 1, 2, 3]['length']]
-          ]
-        ],
-        [...StartColumnIndex, StartColumnIndex['length']],
-        [...EndColumnIndex, EndColumnIndex['length']]
-      >
+          $1[[...StartColumnIndex]['length']],
+          $2[[...StartColumnIndex, 1]['length']],
+          $3[[...StartColumnIndex, 1, 2]['length']],
+          $4[[...StartColumnIndex, 1, 2, 3]['length']]
+        ]
+      ],
+      EndColumnIndex['length'] extends Board[0]['length'] ? [] : [...StartColumnIndex, StartColumnIndex['length']],
+      EndColumnIndex['length'] extends Board[0]['length'] ? [0, 1, 2, 3] : [...EndColumnIndex, EndColumnIndex['length']]
+    >
   : Result;
