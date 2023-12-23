@@ -160,7 +160,7 @@ type GetLeftDiagonals<
   ...infer R extends Connect4Cell[][]
 ]
   ? EndColumnIndex['length'] extends Board[0]['length']
-    ? GetRightDiagonals<
+    ? GetLeftDiagonals<
         [$2, $3, $4, ...R],
         [
           ...Result,
@@ -174,7 +174,7 @@ type GetLeftDiagonals<
         [],
         [0, 1, 2, 3]
       >
-    : GetRightDiagonals<
+    : GetLeftDiagonals<
         Board,
         [
           ...Result,
