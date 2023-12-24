@@ -11,7 +11,7 @@ type Move<
 > = Maze[NewPosition[0]['length']][NewPosition[1]['length']] extends '  '
   ? UpdateMaze<UpdateMaze<Maze, CurrentPosition, Alley>, NewPosition, '🎅'>
   : NewPosition extends -1
-  ? MazeWin
+  ? Cookies
   : Maze;
 
 type GetPositionValue<Maze extends string[][], Position extends unknown[][]> = Maze[Position[0]['length']][Position[1]['length']];
@@ -77,3 +77,9 @@ type GetNewPosition<CurrentPosition extends unknown[][], Delta extends [number, 
       : -1
     : [[...CurrentPosition[0], 'Y'], CurrentPosition[1]]
   : never;
+
+type CreateArrayOfItems<Length extends number, Item extends unknown, Result extends unknown[] = []> = Result['length'] extends Length
+  ? Result
+  : CreateArrayOfItems<Length, Item, [...Result, Item]>;
+
+type Cookies = CreateArrayOfItems<10, CreateArrayOfItems<10, '🍪'>>;
