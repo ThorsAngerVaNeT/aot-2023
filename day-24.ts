@@ -82,4 +82,4 @@ type CreateArrayOfItems<Length extends number, Item extends unknown, Result exte
   ? Result
   : CreateArrayOfItems<Length, Item, [...Result, Item]>;
 
-type Cookies = CreateArrayOfItems<10, CreateArrayOfItems<10, '🍪'>>;
+type Cookies = CreateArrayOfItems<10, CreateArrayOfItems<10, DELICIOUS_COOKIES>>;
