@@ -23,7 +23,7 @@ Looks like we need some changes to the code again!
 1. my golf game ran late this morning.. so since the other two changes were quick to implement, I'm sure this will be just as fast, right?!
 
 - Kris Kringle
-  \"at Santa's workshop, we value loyalty over all else\"
+  "at Santa's workshop, we value loyalty over all else"
 ```
 
 Wow. What a pointless email. For once, calling a meeting would have been better.

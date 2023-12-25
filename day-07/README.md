@@ -2,21 +2,21 @@
 
 ## Filtering The Children (part 2)
 
-_\\[transcript of a slack conversation at 11:23pm between Santa and Chipper (one of the elves that worked on the filtering code from yesterday)\\]_
+_\[transcript of a slack conversation at 11:23pm between Santa and Chipper (one of the elves that worked on the filtering code from yesterday)\]_
 
-> _\\[Santa\\]_ We've got a big problem. That code that you gave me yesterday doesn't work!
+> _\[Santa\]_ We've got a big problem. That code that you gave me yesterday doesn't work!
 >
-> _\\[Chipper\\]_ what doesn't work about it?
+> _\[Chipper\]_ what doesn't work about it?
 >
-> _\\[Santa\\]_ It turns out I need the data formatted in a completely different way! The inputs and outputs all need to be different.
+> _\[Santa\]_ It turns out I need the data formatted in a completely different way! The inputs and outputs all need to be different.
 >
-> _\\[Chipper\\]_ ok, so it sounds like the requirements have changed. did you ask my manager? it's late and I'm relaxing. I'm in the middle of a game of League of Legends.
+> _\[Chipper\]_ ok, so it sounds like the requirements have changed. did you ask my manager? it's late and I'm relaxing. I'm in the middle of a game of League of Legends.
 >
-> _\\[Santa\\]_ Is that like RuneScape? Well anyway, would you mind helping me out in a pinch? Think of this as paying your dues for a better position later!
+> _\[Santa\]_ Is that like RuneScape? Well anyway, would you mind helping me out in a pinch? Think of this as paying your dues for a better position later!
 >
-> _\\[Chipper\\]_ ok. I guess.
+> _\[Chipper\]_ ok. I guess.
 >
-> _\\[Santa\\]_ Wonderful! Here are the inputs and outputs! That oughta be plenty for you! Ok, I gotta get some rest for a golf game I'm having tomorrow. Signing off!
+> _\[Santa\]_ Wonderful! Here are the inputs and outputs! That oughta be plenty for you! Ok, I gotta get some rest for a golf game I'm having tomorrow. Signing off!
 
 ## Developing From The Tests
 

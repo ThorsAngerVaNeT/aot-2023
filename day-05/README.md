@@ -2,7 +2,7 @@
 
 ## Organize Santa's List
 
-_\\[The elves walk into work early on the morning of December 5th. A sign that reads \"we're all about passion, not just paychecks\" hangs above the entrance to the factory floor.\\]_
+_\[The elves walk into work early on the morning of December 5th. A sign that reads \"we're all about passion, not just paychecks\" hangs above the entrance to the factory floor.\]_
 
 It's been a tough year for Santa's workshop. The elves are a little behind schedule on getting Santa his list. Santa _reallly really_ likes to see the full list of names far in advance of Christmas Eve when he makes his deliveries.
 
