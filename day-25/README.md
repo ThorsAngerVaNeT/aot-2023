@@ -22,19 +22,19 @@ Challenges by [@bautistaaa](https://github.com/bautistaaa) and [@ecyrbe](https:/
 
 
 
-[@hacksore](https://github.com/hacksore)
-[@PickleNik](https://github.com/PickleNik)
-[@QuiiBz](https://github.com/QuiiBz)
-[@jhechtf](https://github.com/jhechtf)
-[@ggrandi](https://github.com/ggrandi)
-[@ayrock-dev](https://github.com/ayrock-dev)
-[@maxdemaio](https://github.com/maxdemaio)
-[@aadamw](https://github.com/aadamw)
-[@zaCKoZAck0](https://github.com/zaCKoZAck0)
-[@odicho](https://github.com/odicho)
-[@basokant](https://github.com/basokant)
-[@anthonyshew](https://github.com/anthonyshew)
-[@is-it-ayush](https://github.com/is-it-ayush)
+[@hacksore](https://github.com/hacksore)  
+[@PickleNik](https://github.com/PickleNik)  
+[@QuiiBz](https://github.com/QuiiBz)  
+[@jhechtf](https://github.com/jhechtf)  
+[@ggrandi](https://github.com/ggrandi)  
+[@ayrock-dev](https://github.com/ayrock-dev)  
+[@maxdemaio](https://github.com/maxdemaio)  
+[@aadamw](https://github.com/aadamw)  
+[@zaCKoZAck0](https://github.com/zaCKoZAck0)  
+[@odicho](https://github.com/odicho)  
+[@basokant](https://github.com/basokant)  
+[@anthonyshew](https://github.com/anthonyshew)  
+[@is-it-ayush](https://github.com/is-it-ayush)  
 and to the rest of the contributors. I am forever grateful for what we have accomplished together.
 
 More great things to come! 🚀
