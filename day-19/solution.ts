@@ -1,20 +1,14 @@
-type Toys = ['🛹', '🚲', '🛴', '🏄', '🛹', '🚲', '🛴', '🏄', '🛹', '🚲', '🛴', '🏄'];
+type ToysList = ['🛹', '🚲', '🛴', '🏄'];
 
-type BoxToys<Item extends string, Count extends number, Result extends string[] = []> = Count extends Result['length']
+type Rotate<List extends string[]> = List extends [infer F extends string, ...infer R extends string[]] ? [...R, F] : never;
+
+type BoxToys<Item extends string, Count extends number, Result extends string[] = []> = Result['length'] extends Count
   ? Result
   : BoxToys<Item, Count, [...Result, Item]>;
 
-type CurrentItem<Index extends number[], ToysArray = Toys> = Toys[Index['length']];
-
-export type Rebuild<ToysList extends number[], Index extends number[] = [], Result extends string[] = []> =
-  ToysList extends [infer Head, ...infer Tail]
-  ? Tail extends number[]
-    ? Head extends number
-      ? BoxToys<CurrentItem<Index>, Head> extends infer Items
-        ? Items extends string[]
-          ? Rebuild<Tail, [...Index, Index['length']], [...Result, ...Items]>
-          : [Items, Index['length']]
-        : never
-      : never
-    : never
+export type Rebuild<ToyCounts extends number[], List extends string[] = ToysList, Result extends unknown[] = []> = ToyCounts extends [
+  infer F extends number,
+  ...infer R extends number[]
+]
+  ? Rebuild<R, Rotate<List>, [...Result, ...BoxToys<List[0], F>]>
   : Result;
