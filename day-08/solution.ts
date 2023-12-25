@@ -1,1 +1,1 @@
-type RemoveNaughtyChildren<List> = Omit<List, `naughty_${string}`>
+export type RemoveNaughtyChildren<List> = Omit<List, `naughty_${string}`>

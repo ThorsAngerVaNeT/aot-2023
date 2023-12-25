@@ -74,7 +74,7 @@ type ValidateMatrix<Matrix extends Reindeer[][], Result extends Boolean = false>
     : false
   : ValidateEntity<Matrix[0]>;
 
-type Validate<Sudoku extends Reindeer[][][]> =
+export type Validate<Sudoku extends Reindeer[][][]> =
   | ValidateMatrix<GetRows<Sudoku>>
   | ValidateMatrix<GetColumns<GetRows<Sudoku>>>
   | ValidateMatrix<GetBlocks<Sudoku>> extends true

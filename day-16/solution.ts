@@ -4,7 +4,7 @@ type FindSantaInRow<T> = T extends [...infer R, infer L]
     : FindSantaInRow<R>
   : never;
 
-type FindSanta<Forest extends unknown[][], RowCount extends number[] = []> =
+export type FindSanta<Forest extends unknown[][], RowCount extends number[] = []> =
   Forest extends [infer First, ...infer Rest extends unknown[][]]
   ? FindSantaInRow<First> extends never
     ? FindSanta<Rest, [...RowCount, RowCount['length']]>

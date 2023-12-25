@@ -1,1 +1,1 @@
-type FilterChildrenBy<StatusesList, Status> = Exclude<StatusesList, Status>;
+export type FilterChildrenBy<StatusesList, Status> = Exclude<StatusesList, Status>;

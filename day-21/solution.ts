@@ -16,7 +16,7 @@ type TicTacToeGame = {
 
 type EmptyBoard = [["  ", "  ", "  "], ["  ", "  ", "  "], ["  ", "  ", "  "]];
 
-type NewGame = {
+export type NewGame = {
   board: EmptyBoard;
   state: "❌";
 };
@@ -103,7 +103,7 @@ type MakeMove<Game extends TicTacToeGame, Y extends number, X extends number> = 
   >;
 };
 
-type TicTacToe<
+export type TicTacToe<
   Game extends TicTacToeGame,
   Move extends TicTacToePositions,
 > = Move extends `${infer Y extends keyof TicTacToeYPositionsIndexMap}-${infer X extends

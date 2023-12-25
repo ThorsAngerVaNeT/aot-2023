@@ -1,0 +1,12 @@
+{
+  "name": "aot-2023",
+  "version": "1.0.0",
+  "keywords": [],
+  "author": "Vadzim Antonau",
+  "license": "ISC",
+  "description": "Solutions of Advent of TypeScript 2023 https://typehero.dev/aot-2023",
+  "devDependencies": {
+    "type-testing": "^0.2.0",
+    "typescript": "^5.3.3"
+  }
+}

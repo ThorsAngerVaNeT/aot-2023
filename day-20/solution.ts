@@ -1,5 +1,5 @@
 type Letters = {
-	A: ["█▀█ ",
+  A: ["█▀█ ",
       "█▀█ ",
       "▀ ▀ "];
 	B: ["█▀▄ ",
@@ -64,7 +64,7 @@ type LineToAsciiArt<
   ? LineToAsciiArt<Rest, ConcatAsciiArtParts<Result, Letters[First]>>
   : Result;
 
-type ToAsciiArt<
+export type ToAsciiArt<
   Message extends string,
   Result extends string[] = [],
 > = Message extends `${infer FirstLine}\n${infer RestLines}`

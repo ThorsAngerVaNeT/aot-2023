@@ -3,7 +3,8 @@ type MazeItem = '🎄' | '🎅' | Alley;
 type DELICIOUS_COOKIES = '🍪';
 type MazeMatrix = MazeItem[][];
 type Directions = 'up' | 'down' | 'left' | 'right';
-type Move<
+
+export type Move<
   Maze extends string[][],
   Direction extends Directions,
   CurrentPosition extends unknown[][] = FindSanta<Maze>,
@@ -11,8 +12,8 @@ type Move<
 > = Maze[NewPosition[0]['length']][NewPosition[1]['length']] extends '  '
   ? UpdateMaze<UpdateMaze<Maze, CurrentPosition, Alley>, NewPosition, '🎅'>
   : NewPosition extends -1
-  ? Cookies
-  : Maze;
+    ? Cookies
+    : Maze;
 
 type GetPositionValue<Maze extends string[][], Position extends unknown[][]> = Maze[Position[0]['length']][Position[1]['length']];
 
